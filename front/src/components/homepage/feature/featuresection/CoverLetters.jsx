@@ -15,8 +15,9 @@ import {
 } from "@heroicons/react/24/outline";
 import { FaRocket, FaShieldAlt, FaLock } from 'react-icons/fa';
 
-// const BACKEND_URL = import.meta.env.VITE_API_URL || 'https://edusmart-aq07.onrender.com';
-const BACKEND_URL = "http://localhost:5000";
+
+const BACKEND_URL = import.meta.env.VITE_BE_URL;
+
 
 export default function CoverLetters() {
   const [formData, setFormData] = useState({

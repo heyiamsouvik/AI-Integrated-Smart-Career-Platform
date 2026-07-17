@@ -36,6 +36,9 @@ function App() {
                 <SignIn
                   routing="path"
                   path="/sign-in"
+                  signUpUrl="/sign-up"
+                  signUpFallbackRedirectUrl="/" // ✅ Replaces redirectUrl on sign-up link
+                  fallbackRedirectUrl="/" // ✅ Replaces redirectUrl on sign-in
                   appearance={{
                     elements: {
                       rootBox: "mx-auto",
@@ -53,6 +56,9 @@ function App() {
                 <SignUp
                   routing="path"
                   path="/sign-up"
+                  signInUrl="/sign-in"
+                  signInFallbackRedirectUrl="/" // ✅ Replaces redirectUrl on sign-in link
+                  fallbackRedirectUrl="/" // ✅ Replaces redirectUrl on sign-up
                   appearance={{
                     elements: {
                       rootBox: "mx-auto",

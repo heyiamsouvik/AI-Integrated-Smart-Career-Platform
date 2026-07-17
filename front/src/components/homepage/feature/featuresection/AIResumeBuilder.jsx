@@ -19,7 +19,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 // const BACKEND_URL = "https://edusmart-aq07.onrender.com";
 
-const BACKEND_URL = "http://localhost:5000";
+const BACKEND_URL = import.meta.env.VITE_BE_URL;
 
 const AIResumeBuilder = () => {
   const [activeTab, setActiveTab] = useState("create");

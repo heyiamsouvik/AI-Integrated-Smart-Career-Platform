@@ -48,19 +48,14 @@ function CTASection() {
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link
-            to="/signup"
+            to="/features"
             className="bg-amber-600 text-white px-8 md:px-10 py-4 md:py-5 rounded-xl md:rounded-2xl font-bold text-lg md:text-xl hover:shadow-2xl hover:scale-105 hover:bg-amber-700 transition-all duration-300 inline-flex items-center gap-2 md:gap-3 group"
           >
             Start Free Trial 
             <ArrowRightIcon className="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-1 transition-transform" />
           </Link>
           
-          <Link
-            to="/demo"
-            className="border-2 border-amber-600 text-amber-700 px-8 md:px-10 py-4 md:py-5 rounded-xl md:rounded-2xl font-semibold text-lg md:text-xl hover:bg-amber-600 hover:text-white transition-all duration-300"
-          >
-            View Demo
-          </Link>
+
         </div>
         
         <div className="mt-8 flex flex-wrap gap-6 justify-center text-sm md:text-base text-gray-700">

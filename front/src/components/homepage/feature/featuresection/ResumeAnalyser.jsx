@@ -13,9 +13,10 @@ import {
 } from "@heroicons/react/24/outline";
 import { FaRocket } from 'react-icons/fa';
 
-// Use environment variable for backend URL
-// const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "https://edusmart-aq07.onrender.com";
-const BACKEND_URL = "http://localhost:5000";
+
+
+const BE_url = import.meta.env.VITE_BE_URL;
+
 
 export default function ResumeAnalyser() {
   const [file, setFile] = useState(null);
@@ -95,7 +96,7 @@ export default function ResumeAnalyser() {
       const formData = new FormData();
       formData.append("resume", file);
 
-      const res = await axios.post(`${BACKEND_URL}/api/analyze`, formData, { 
+      const res = await axios.post(`${BE_url}/api/analyze`, formData, { 
         headers: {
           "Content-Type": "multipart/form-data",
         },

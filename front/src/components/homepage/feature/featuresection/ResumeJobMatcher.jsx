@@ -15,6 +15,11 @@ import {
 } from "@heroicons/react/24/outline";
 import { FaRocket } from 'react-icons/fa';
 
+
+const BE_url = import.meta.env.VITE_BE_URL;
+
+
+
 export default function ResumeJobMatcher() {
   const [file, setFile] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -68,7 +73,7 @@ export default function ResumeJobMatcher() {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/api/jobs/",
+        `${BE_url}/api/jobs/`,
         formData,
         {
           headers: {

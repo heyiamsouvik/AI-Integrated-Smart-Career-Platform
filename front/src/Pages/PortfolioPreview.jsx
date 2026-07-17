@@ -13,6 +13,10 @@ import {
 } from "@heroicons/react/24/outline";
 import { FaRocket } from 'react-icons/fa';
 
+
+const BE_url = import.meta.env.VITE_BE_URL;
+
+
 const PortfolioPreview = () => {
   const [file, setFile] = useState(null);
   const [htmlContent, setHtmlContent] = useState('');
@@ -77,7 +81,7 @@ const PortfolioPreview = () => {
     formData.append('resume', file);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/generate', formData, {
+      const response = await axios.post(`${BE_url}/api/generate`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
