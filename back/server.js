@@ -29,14 +29,24 @@ app.options('{*any}', cors());
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ limit: '10mb', extended: true }));
 
-
-app.use("/api/generate", generateRoute);
-app.use("/api/jobs", jobRoutes);
+// Resume Builder Route
 app.use("/api/resume", resumeRoutes);
+
+// Resume Analyser Route
 app.use("/api/analyze", analyzeRoutes);
+
+//Cover Letter Generation Route
 app.use("/api", coverRoute);
 
+//POrtfolio Generatioin Route
+app.use("/api/generate", generateRoute);
 
+//Job Matching Route
+app.use("/api/jobs", jobRoutes);
+
+const port = process.env.PORT || 3000;
 app.listen(process.env.PORT, () => {
   console.log(`Server running on port ${process.env.PORT}`);
 });
+
+
