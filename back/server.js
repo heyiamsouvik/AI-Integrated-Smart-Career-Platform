@@ -11,7 +11,7 @@ const coverRoute = require("./routes/cover.route");
 const app = express();
 
 const allowedOrigins = [
-  process.env.FRONTEND_URL
+   'https://ai-integrated-smart-career-platform.onrender.com'
 ].filter(Boolean);
 
 app.use(cors({
