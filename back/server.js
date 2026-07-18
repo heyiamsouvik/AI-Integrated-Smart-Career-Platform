@@ -21,8 +21,10 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization', 'Accept']
 }));
 
+console.log('FRONTEND_URL:', process.env.FRONTEND_URL);
 
-app.options('{*any}', cors());
+
+// app.options('{*any}', cors());
 
 
 app.use(express.json({ limit: '10mb' }));
