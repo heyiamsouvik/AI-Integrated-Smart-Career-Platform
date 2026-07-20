@@ -37,7 +37,7 @@ ${resumeText}
 
     
     const ai = await groq.chat.completions.create({
-      model: "qwen/qwen3-32b",
+      model: process.env.MODEL_NAME,
       messages: [{ role: "user", content: prompt }],
       temperature: 0.3,
     });
